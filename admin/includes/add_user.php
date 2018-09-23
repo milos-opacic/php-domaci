@@ -29,7 +29,7 @@ if (isset($_POST['create_user'])) {
 	$query .= "VALUES('{$username}', '{$user_firstname}', '{$user_password}', '{$user_lastname}', '{$user_email}', '{$user_image}', '{$user_role}')";
 	$create_user_query = mysqli_query($connection, $query);
 	confirm($create_user_query);
-	echo "User created! " . "<a href='users.php'>View users</a>";
+	echo "<p class='bg-success'>User created! " . "<a href='users.php'>View users</a></p>";
 
  }
 

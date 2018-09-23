@@ -7,6 +7,8 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
 
     if (!empty($username) && !empty($email) && !empty($password)) {
 
@@ -24,7 +26,8 @@ if (isset($_POST['submit'])) {
         // $salt = $row['randSalt']; 
         // $password = crypt($password, $salt);
 
-        $query = "INSERT INTO users (username, user_email, user_password, user_role) VALUES ('{$username}', '{$email}', '{$password}', 'subscriber')";
+        $query = "INSERT INTO users (username, user_email, user_password, user_role, user_firstname, user_lastname) 
+                        VALUES ('{$username}', '{$email}', '{$password}', 'subscriber','{$firstname}', '{$lastname}')";
         $register_user_query = mysqli_query($connection, $query);
         confirm($register_user_query);
 
@@ -49,7 +52,7 @@ if (isset($_POST['submit'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Registracija</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -91,6 +94,12 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Firstname" name="firstname" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Lastname" name="lastname" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" id="key">

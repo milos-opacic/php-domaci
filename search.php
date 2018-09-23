@@ -13,7 +13,7 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
              <h1 class="my-4">Cryptocurrencies
-              <small>expansion</small>
+              <small>blog</small>
              </h1>
 
 

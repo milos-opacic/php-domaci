@@ -7,6 +7,7 @@
                                     <th>Lastname</th>
                                     <th>Email</th>
                                     <th>Role</th>
+                                    <th>Image</th>
                                     <th>Admin</th>
                                     <th>Subscriber</th>
                                     <th>Delete</th>
@@ -45,7 +46,8 @@
               
                  echo "<td>{$user_lastname}</td>
                       <td>{$user_email}</td>
-                      <td>{$user_role}</td>";
+                      <td>{$user_role}</td>
+                      <td><img width='100' height='130' src= '../../img/{$user_image}' alt= 'image'</td>";
 
                 // $query = "SELECT * FROM posts WHERE post_id = $comment_post_id";
                 // $select_post_id_query = mysqli_query($connection, $query);

@@ -15,12 +15,12 @@ if (isset($_POST['checkboxArray'])) {
         $update_to_draft_status = mysqli_query($connection, $query);
         confirm($update_to_draft_status);
         break;
-        case 'delete':
+      case 'delete':
         $query = "DELETE FROM posts WHERE post_id = {$checkboxValue}";
         $delete_post = mysqli_query($connection, $query);
         confirm($delete_post);
         break;
-        case 'clone':
+      case 'clone':
         $query = "SELECT * FROM posts WHERE post_id = {$checkboxValue}";
         $select_posts_query = mysqli_query($connection, $query);
         confirm($select_posts_query);
@@ -39,11 +39,11 @@ if (isset($_POST['checkboxArray'])) {
         $copy_query = mysqli_query($connection, $query);
         confirm($copy_query);
         break;
-        case 'reset':
+      case 'reset':
         $query = "UPDATE posts SET post_views_count = 0 WHERE post_id = {$checkboxValue}";
         $reset_query = mysqli_query($connection, $query);
         confirm($reset_query);
-          break;
+        break;
       default:
         # code...
         break;
